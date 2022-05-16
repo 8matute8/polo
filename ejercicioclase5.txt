@@ -1,0 +1,27 @@
+Console.WriteLine("Hola bienvenido al ejercicio de la clase Nº 5");
+
+
+Console.WriteLine("Hola ingresa tu nombre");
+string nombre = Console.ReadLine();
+Console.WriteLine($"¡Hola {nombre} !");
+Console.WriteLine($"Desea continuar (S/N)");
+string menu = Console.ReadLine().ToUpper();
+
+while (menu == "S")
+{
+    Console.Clear();
+    Console.WriteLine("Hola de nuevo ingresa tu nombre");
+    nombre = Console.ReadLine();
+    Console.WriteLine($"¡Hola {nombre} !");
+    Console.WriteLine($"Desea continuar (S/N)");
+    menu = Console.ReadLine().ToUpper();
+}
+if (menu != "N")
+{
+    Console.WriteLine($"La Opcion '{menu}' no es valida");
+}
+    else
+    {
+    Console.WriteLine("Programa Finalizado correctamente");
+    Console.WriteLine("Alumno: Matias Corbalan");
+}
