@@ -1,0 +1,28 @@
+Console.WriteLine("Hola bienvenido al ejercicio de la clase Nº 6");
+int intentos = 0;
+int numeroSecreto = new Random(DateTime.Now.Millisecond).Next(1,21);
+int prueba = 0;
+Console.WriteLine(numeroSecreto);
+
+
+while (prueba != numeroSecreto)
+{
+    Console.WriteLine("Hola ingresa el numero 'secreto'");
+    prueba = int.Parse(Console.ReadLine());
+    intentos++;
+    if (numeroSecreto < prueba)
+    {
+        Console.WriteLine("El numero ingresado es mayor que el secreto");
+        Console.WriteLine("Presione una tecla para continuar");
+        Console.ReadKey();
+    }
+    else if (numeroSecreto > prueba)
+    {
+        Console.WriteLine("El numero ingresado es menor que el secreto");
+        Console.WriteLine("Presione una tecla para continuar");
+        Console.ReadKey();
+    }
+    Console.Clear();
+}
+    Console.WriteLine($"Felicidades has adivinado el numero secreto que era: {numeroSecreto}");
+    Console.WriteLine($"Lo has logrado en {intentos} intentos");
